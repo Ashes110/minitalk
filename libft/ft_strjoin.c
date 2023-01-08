@@ -24,11 +24,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup((char *)s2));
 	if (!s2)
 		return (ft_strdup((char *)s1));
-	tmp_cnt = 0;
-	s_cnt = 0;
 	tmp = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!tmp)
 		return (NULL);
+	tmp_cnt = 0;
+	s_cnt = 0;
 	while (s1[s_cnt])
 		tmp[tmp_cnt++] = s1[s_cnt++];
 	s_cnt = 0;

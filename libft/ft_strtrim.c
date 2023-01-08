@@ -30,21 +30,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	char	*tmp;
 	size_t	cnt;
+	char	*tmp;
 
 	if (!s1 || !set)
 		return (NULL);
-	cnt = 0;
 	start = 0;
-	end = ft_strlen(s1);
 	while (set_check(s1[start], set) && s1[start])
 		start += 1;
+	end = ft_strlen(s1);
 	while (set_check(s1[end - 1], set) && start < end)
 		end -= 1;
 	tmp = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!tmp)
-		return (0);
+		return (NULL);
+	cnt = 0;
 	while (start < end)
 		tmp[cnt++] = s1[start++];
 	tmp[cnt] = '\0';

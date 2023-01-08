@@ -24,7 +24,7 @@ void	*ft_calloc(size_t cnt, size_t size)
 		tmp = (void *)malloc(sizeof(void) * size * cnt);
 	if (!tmp)
 		return (NULL);
-	if (cnt * size)
+	if (cnt * size != 0)
 		ft_bzero(tmp, size * cnt);
 	else
 		ft_bzero(tmp, 1);

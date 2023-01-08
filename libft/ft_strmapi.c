@@ -19,10 +19,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	cnt = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
+	cnt = 0;
 	while (s[cnt])
 	{
 		str[cnt] = f(cnt, s[cnt]);

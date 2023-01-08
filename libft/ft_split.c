@@ -51,10 +51,10 @@ char	**ft_split(char const *s, char c)
 	size_t	cnt;
 	int		len;
 
-	cnt = 0;
-	len = 0;
 	if (!s)
 		return (NULL);
+	cnt = 0;
+	len = 0;
 	while (s[cnt])
 	{
 		if (s[cnt] != c && (s[cnt + 1] == c || !s[cnt + 1]))
